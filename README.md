@@ -4,7 +4,9 @@ An end-to-end sales analytics and AI-based forecasting project built using Pytho
 
 ## 🚀 Project Overview
 
-This project analyzes historical sales data, performs data cleaning and exploratory analysis, engineers useful features, trains machine learning models, generates future sales forecasts, and presents the results through an interactive Power BI dashboard.
+This project analyzes historical sales data, performs data cleaning and exploratory analysis, engineers useful features, trains machine learning models, generates future sales forecasts, and presents the results through interactive Streamlit and Power BI dashboards.
+
+The project combines **Machine Learning and Business Intelligence** to understand historical sales performance and forecast future sales.
 
 ### Key Components
 
@@ -14,8 +16,22 @@ This project analyzes historical sales data, performs data cleaning and explorat
 - 🤖 Machine Learning
 - 📈 Model Evaluation
 - 🔮 Future Sales Forecasting
+- 🌐 Streamlit Dashboard
 - 📊 Power BI Dashboard
 - 💡 Business Insights
+
+## 🎯 Project Objectives
+
+The main objectives of this project are:
+
+1. Analyze historical sales performance.
+2. Identify trends and patterns in sales.
+3. Analyze sales performance across categories and regions.
+4. Engineer useful features for machine learning.
+5. Train and evaluate machine learning models.
+6. Forecast future sales.
+7. Build interactive dashboards for business analysis.
+8. Present actionable business insights using data visualization.
 
 ### 🔄 Project Workflow
 
@@ -35,6 +51,8 @@ Sales Forecasting
         ↓
 Future Forecast
         ↓
+Streamlit Dashboard
+        ↓
 Power BI Dashboard
         ↓
 Business Insights
@@ -43,32 +61,67 @@ Business Insights
 
 | Technology | Purpose |
 |---|---|
-| Python | Data processing & machine learning |
-| Pandas | Data manipulation |
+| Python | Data processing and machine learning |
+| Pandas | Data manipulation and analysis |
 | NumPy | Numerical computation |
-| Scikit-learn | Machine learning |
-| XGBoost | Forecasting / machine learning |
+| Scikit-learn | Machine learning and model evaluation |
+| XGBoost | Machine learning / forecasting |
 | Matplotlib | Data visualization |
 | Seaborn | Statistical visualization |
-| Joblib | Model persistence |
-| Power BI | Dashboard & business intelligence |
+| Plotly | Interactive visualizations |
+| Streamlit | Interactive web dashboard |
+| Joblib | Model saving and loading |
+| Power BI | Business intelligence and dashboards |
 | Git & GitHub | Version control |
 
-### 📂 Project Structure
+## 📂 Dataset
 
+The project uses sales transaction data containing information such as:
+
+- Order ID
+- Order Date
+- Customer ID
+- Product
+- Category
+- Region
+- Quantity
+- Unit Price
+- Discount
+- Sales
+- Profit
+
+The dataset contains approximately 12,000 sales transactions.
+
+## 📁 Project Structure
 
 AI-Sales-Forecasting-PowerBI/
 │
-├── code/
-│   ├── data_cleaning.py
-│   ├── eda.py
-│   ├── feature_engineering.py
-│   ├── train_model.py
-│   ├── model_evaluation.py
-│   ├── sales_forecasting.py
-│   ├── forecast_model.py
-│   ├── future_forecast.py
-│   └── forecast_visualization.py
+├── app.py
+│
+├── data_cleaning.py
+├── eda.py
+├── feature_engineering.py
+├── train_model.py
+├── model_evaluation.py
+├── sales_forecasting.py
+├── forecast_model.py
+├── future_forecast.py
+├── forecast_visualization.py
+│
+├── data/
+│   ├── cleaned_sales.csv
+│   ├── forecast_predictions.csv
+│   ├── forecasting_sales_data.csv
+│   ├── future_sales_forecast.csv
+│   ├── ml_sales_data.csv
+│   ├── model_results.csv
+│   └── prediction_results.csv
+│
+├── models/
+│   ├── sales_forecasting_model.pkl
+│   └── sales_prediction_model.pkl
+│
+├── output/
 │
 ├── PowerBI/
 │   └── AI_Sales_Forecast_Final_v1.pbix
@@ -106,7 +159,7 @@ The dashboard provides an interactive view of sales performance, profitability, 
 
 ## 🤖 Machine Learning Pipeline
 
-The Python code implements the following stages:
+The Python modules implement the following stages:
 
 ### 1. Data Cleaning
 
@@ -156,49 +209,71 @@ Generates future sales predictions.
 
 Visualizes historical and forecasted sales.
 
+## 🌐 Streamlit Dashboard
+
+The project includes an interactive Streamlit dashboard for analyzing historical sales and future forecasts.
+
+Run the application using:
+
+python -m streamlit run app.py
+
 ## 💡 Business Insights
 
-The dashboard identifies important business patterns from the sales data.
+The project provides insights into:
 
-| Insight | Finding |
-|---|---|
-| 🏆 Top Category | Electronics |
-| 🌎 Top Region | West |
-| 📅 Best Sales Month | April |
-| 🔮 AI Forecast Trend | Declining |
+- Category-wise sales performance
+- Regional sales performance
+- Monthly sales trends
+- Profitability
+- Future sales forecasts
+- Forecast trends
+- Model prediction performance
 
-These insights are supported by the analytical visuals presented in the Power BI dashboard.
+These insights can support data-driven business decisions related to sales planning, regional strategy, and future demand.
 
 ## 📈 Key Performance Indicators
 
 The dashboard tracks the following major business KPIs:
 
-- 💰 Total Sales
-- 💵 Total Profit
-- 📊 Profit Margin
-- 🛒 Total Orders
+| KPI | Description |
+|---|---|
+| Total Sales | Total revenue generated |
+| Total Profit | Total profit generated |
+| Profit Margin | Profit as a percentage of sales |
+| Total Orders | Number of orders |
+| Quantity Sold | Total quantity sold |
+| Average Order Value | Average sales value per order |
 
 ## ⚙️ Installation
 
-### Clone the repository
+### 1. Clone the repository
 
-```bash
 git clone https://github.com/ritikraj77320/AI-Sales-Forecasting-PowerBI.git
 
 cd AI-Sales-Forecasting-PowerBI
 
 pip install -r requirements.txt
 
+## ▶️ Running the Dashboard
+
+Run the Streamlit application using:
+
+python -m streamlit run app.py
+
 
 ## 🔮 Future Improvements
 
-- 🌐 Build a Streamlit web application
-- 🚀 Deploy the forecasting application online
-- 🔄 Add automated data updates
-- 📊 Add interactive forecast controls
-- 🤖 Experiment with advanced forecasting models
-- 📱 Improve web dashboard responsiveness
-- ☁️ Deploy the complete ML pipeline
+Possible future improvements include:
+
+- 🌐 Online deployment of the Streamlit dashboard
+- 🔄 Automated data updates
+- 📊 Automated Power BI refresh
+- 🤖 Experimentation with advanced forecasting algorithms
+- 📦 Inventory demand forecasting
+- 🚨 Sales anomaly detection
+- ☁️ Cloud-based data integration
+- 📈 Real-time forecasting
+- 🗄️ Database integration
 
 ## 👨‍💻 Author
 

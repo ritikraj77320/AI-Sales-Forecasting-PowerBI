@@ -186,6 +186,11 @@ print("=" * 60)
 
 results_df = pd.DataFrame(results).T
 
+# Save model performance results
+results_df.to_csv("data/model_results.csv")
+
+print("\nModel performance saved to data/model_results.csv")
+
 print(results_df)
 
 
@@ -193,7 +198,7 @@ print(results_df)
 # 9. SELECT BEST MODEL
 # =========================================================
 
-best_model_name = results_df["R2"].idxmax()
+best_model_name = results_df["MAE"].idxmin()
 
 print("\nBest Model:")
 print(best_model_name)
@@ -210,6 +215,30 @@ best_pipeline = Pipeline(
 )
 
 best_pipeline.fit(X_train, y_train)
+
+# =========================================================
+# 10.1 CREATE ACTUAL VS PREDICTED DATA
+# =========================================================
+
+# Generate predictions using the best pipeline
+best_predictions = best_pipeline.predict(X_test)
+
+# Create comparison dataframe
+prediction_df = pd.DataFrame({
+    "Actual Sales": y_test.values,
+    "Predicted Sales": best_predictions
+})
+
+# Save prediction results
+prediction_df.to_csv(
+    "data/prediction_results.csv",
+    index=False
+)
+
+print("\nActual vs Predicted data saved successfully!")
+print("File: data/prediction_results.csv")
+print(prediction_df.head())
+print("File: data/prediction_results.csv")
 
 
 # =========================================================
