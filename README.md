@@ -219,7 +219,7 @@ python -m streamlit run app.py
 
 ## 🚀 Live Dashboard
 
-[Open the AI Sales Forecasting Dashboard](https://ritikraj77320-ai-sales-forecasting-powerbi-app-p9r8ot.streamlit.app)
+[Open the AI Sales Forecasting Dashboard](https://ai-sales-forecasting-powerbi.streamlit.app/)
 
 ## 💡 Business Insights
 
